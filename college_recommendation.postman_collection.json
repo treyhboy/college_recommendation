@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "7810a6fc-c687-4b2a-a5a6-3474042b34a0",
+		"name": "Java Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18054551"
+	},
+	"item": [
+		{
+			"name": "By Subject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"gre_score\":400,\n    \"subject\":\"Nursing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/get_college/by_subject"
+			},
+			"response": []
+		},
+		{
+			"name": "By Subject And Score",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"gre_score\":300,\n    \"subject\":\"Nursing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/get_college/by_subject_and_score"
+			},
+			"response": []
+		},
+		{
+			"name": "By Subject And Faculty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"gre_score\":200,\n    \"subject\":\"Agriculture\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/get_college/by_faculties"
+			},
+			"response": []
+		}
+	]
+}
