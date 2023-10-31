@@ -1,0 +1,33 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.5'
+	id 'io.spring.dependency-management' version '1.1.3'
+}
+
+group = 'com.college_recommendation'
+version = '0.0.1-SNAPSHOT'
+
+apply plugin: 'application'
+
+mainClassName = 'com.college_recommendation.app.Application'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'com.opencsv:opencsv:5.8' // Use the latest version available
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	compileOnly 'org.projectlombok:lombok:1.18.30'
+	annotationProcessor 'org.projectlombok:lombok:1.18.30'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+tasks.named('run') {
+	main = 'com.college_recommendation.app.Application'
+	classpath = sourceSets.main.runtimeClasspath
+}
